@@ -1,0 +1,749 @@
+$date
+	Thu Nov  5 08:17:32 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_snn $end
+$var wire 1 ! in_ready $end
+$var wire 1 " s_out $end
+$var wire 1 # out_valid $end
+$var wire 1 $ network_active_flag $end
+$var parameter 32 % ADDR_WIDTH $end
+$var parameter 32 & DATA_WIDTH $end
+$var parameter 32 ' N_INPUTS_L1 $end
+$var parameter 32 ( N_NEURONS_L1 $end
+$var parameter 32 ) N_NEURONS_L2 $end
+$var parameter 8 * V_THRESHOLD $end
+$var reg 1 + ce $end
+$var reg 1 , clk $end
+$var reg 1 - in_valid $end
+$var reg 8 . l1_bram_waddr [7:0] $end
+$var reg 8 / l1_bram_wdata [7:0] $end
+$var reg 1 0 l1_bram_we $end
+$var reg 8 1 l2_bram_waddr [7:0] $end
+$var reg 8 2 l2_bram_wdata [7:0] $end
+$var reg 1 3 l2_bram_we $end
+$var reg 1 4 out_ready $end
+$var reg 1 5 reset $end
+$var reg 2 6 s_in [1:0] $end
+$scope module uut $end
+$var wire 1 + ce $end
+$var wire 1 , clk $end
+$var wire 1 ! in_ready $end
+$var wire 1 - in_valid $end
+$var wire 8 7 l1_bram_waddr [7:0] $end
+$var wire 8 8 l1_bram_wdata [7:0] $end
+$var wire 1 0 l1_bram_we $end
+$var wire 1 9 l1_l2_ready $end
+$var wire 8 : l2_bram_waddr [7:0] $end
+$var wire 8 ; l2_bram_wdata [7:0] $end
+$var wire 1 3 l2_bram_we $end
+$var wire 1 $ network_active_flag $end
+$var wire 1 4 out_ready $end
+$var wire 1 5 reset $end
+$var wire 2 < s_in [1:0] $end
+$var wire 1 " s_out $end
+$var wire 1 # out_valid $end
+$var wire 1 = l2_active_flag $end
+$var wire 2 > l1_s_out [1:0] $end
+$var wire 1 ? l1_l2_valid $end
+$var wire 1 @ l1_active_flag $end
+$var parameter 32 A ADDR_WIDTH $end
+$var parameter 32 B DATA_WIDTH $end
+$var parameter 32 C N_INPUTS_L1 $end
+$var parameter 32 D N_NEURONS_L1 $end
+$var parameter 32 E N_NEURONS_L2 $end
+$var parameter 8 F V_THRESHOLD $end
+$scope module layer1_inst $end
+$var wire 1 @ active_flag $end
+$var wire 8 G bram_waddr [7:0] $end
+$var wire 8 H bram_wdata [7:0] $end
+$var wire 1 0 bram_we $end
+$var wire 1 + ce $end
+$var wire 1 , clk $end
+$var wire 1 ! in_ready $end
+$var wire 1 - in_valid $end
+$var wire 1 9 out_ready $end
+$var wire 1 5 reset $end
+$var wire 2 I s_in [1:0] $end
+$var wire 2 J s_out [1:0] $end
+$var wire 2 K layer_s_out [1:0] $end
+$var wire 1 L layer_active $end
+$var parameter 32 M ADDR_WIDTH $end
+$var parameter 32 N DATA_WIDTH $end
+$var parameter 32 O N_INPUTS $end
+$var parameter 32 P N_NEURONS $end
+$var parameter 8 Q V_THRESHOLD $end
+$var reg 1 ? out_valid $end
+$scope module mem_mapped_layer_inst $end
+$var wire 8 R bram_waddr [7:0] $end
+$var wire 8 S bram_wdata [7:0] $end
+$var wire 1 0 bram_we $end
+$var wire 1 T ce $end
+$var wire 1 , clk $end
+$var wire 1 5 reset $end
+$var wire 2 U s_in [1:0] $end
+$var wire 2 V s_out [1:0] $end
+$var wire 1 L active_flag $end
+$var parameter 32 W ADDR_WIDTH $end
+$var parameter 32 X DATA_WIDTH $end
+$var parameter 32 Y N_INPUTS $end
+$var parameter 32 Z N_NEURONS $end
+$var parameter 8 [ V_THRESHOLD $end
+$scope begin gen_neurons[0] $end
+$var parameter 2 \ n $end
+$var reg 8 ] acc [7:0] $end
+$scope begin gen_bram[0] $end
+$var wire 8 ^ calc_addr [7:0] $end
+$var wire 1 _ is_target_addr $end
+$var parameter 2 ` i $end
+$scope module weight_bram $end
+$var wire 8 a addr [7:0] $end
+$var wire 1 , clk $end
+$var wire 8 b din [7:0] $end
+$var wire 1 c re $end
+$var wire 1 d we $end
+$var parameter 32 e ADDR_WIDTH $end
+$var parameter 32 f DATA_WIDTH $end
+$var reg 8 g dout [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin gen_bram[1] $end
+$var wire 8 h calc_addr [7:0] $end
+$var wire 1 i is_target_addr $end
+$var parameter 2 j i $end
+$scope module weight_bram $end
+$var wire 8 k addr [7:0] $end
+$var wire 1 , clk $end
+$var wire 8 l din [7:0] $end
+$var wire 1 m re $end
+$var wire 1 n we $end
+$var parameter 32 o ADDR_WIDTH $end
+$var parameter 32 p DATA_WIDTH $end
+$var reg 8 q dout [7:0] $end
+$upscope $end
+$upscope $end
+$scope module neuron_inst $end
+$var wire 1 T ce $end
+$var wire 1 , clk $end
+$var wire 8 r i_syn [7:0] $end
+$var wire 1 5 reset $end
+$var wire 16 s v_decayed_full [15:0] $end
+$var wire 8 t v_decayed [7:0] $end
+$var parameter 8 u ALPHA $end
+$var parameter 32 v DATA_WIDTH $end
+$var parameter 8 w V_THRESHOLD $end
+$var reg 1 x s_out $end
+$var reg 8 y v_mem [7:0] $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 z k [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin gen_neurons[1] $end
+$var parameter 2 { n $end
+$var reg 8 | acc [7:0] $end
+$scope begin gen_bram[0] $end
+$var wire 8 } calc_addr [7:0] $end
+$var wire 1 ~ is_target_addr $end
+$var parameter 2 !" i $end
+$scope module weight_bram $end
+$var wire 8 "" addr [7:0] $end
+$var wire 1 , clk $end
+$var wire 8 #" din [7:0] $end
+$var wire 1 $" re $end
+$var wire 1 %" we $end
+$var parameter 32 &" ADDR_WIDTH $end
+$var parameter 32 '" DATA_WIDTH $end
+$var reg 8 (" dout [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin gen_bram[1] $end
+$var wire 8 )" calc_addr [7:0] $end
+$var wire 1 *" is_target_addr $end
+$var parameter 2 +" i $end
+$scope module weight_bram $end
+$var wire 8 ," addr [7:0] $end
+$var wire 1 , clk $end
+$var wire 8 -" din [7:0] $end
+$var wire 1 ." re $end
+$var wire 1 /" we $end
+$var parameter 32 0" ADDR_WIDTH $end
+$var parameter 32 1" DATA_WIDTH $end
+$var reg 8 2" dout [7:0] $end
+$upscope $end
+$upscope $end
+$scope module neuron_inst $end
+$var wire 1 T ce $end
+$var wire 1 , clk $end
+$var wire 8 3" i_syn [7:0] $end
+$var wire 1 5 reset $end
+$var wire 16 4" v_decayed_full [15:0] $end
+$var wire 8 5" v_decayed [7:0] $end
+$var parameter 8 6" ALPHA $end
+$var parameter 32 7" DATA_WIDTH $end
+$var parameter 8 8" V_THRESHOLD $end
+$var reg 1 9" s_out $end
+$var reg 8 :" v_mem [7:0] $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 ;" k [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module layer2_inst $end
+$var wire 1 = active_flag $end
+$var wire 8 <" bram_waddr [7:0] $end
+$var wire 8 =" bram_wdata [7:0] $end
+$var wire 1 3 bram_we $end
+$var wire 1 + ce $end
+$var wire 1 , clk $end
+$var wire 1 9 in_ready $end
+$var wire 1 ? in_valid $end
+$var wire 1 4 out_ready $end
+$var wire 1 5 reset $end
+$var wire 2 >" s_in [1:0] $end
+$var wire 1 " s_out $end
+$var wire 1 ?" layer_s_out $end
+$var wire 1 @" layer_active $end
+$var parameter 32 A" ADDR_WIDTH $end
+$var parameter 32 B" DATA_WIDTH $end
+$var parameter 32 C" N_INPUTS $end
+$var parameter 32 D" N_NEURONS $end
+$var parameter 8 E" V_THRESHOLD $end
+$var reg 1 # out_valid $end
+$scope module mem_mapped_layer_inst $end
+$var wire 8 F" bram_waddr [7:0] $end
+$var wire 8 G" bram_wdata [7:0] $end
+$var wire 1 3 bram_we $end
+$var wire 1 H" ce $end
+$var wire 1 , clk $end
+$var wire 1 5 reset $end
+$var wire 2 I" s_in [1:0] $end
+$var wire 1 ?" s_out $end
+$var wire 1 @" active_flag $end
+$var parameter 32 J" ADDR_WIDTH $end
+$var parameter 32 K" DATA_WIDTH $end
+$var parameter 32 L" N_INPUTS $end
+$var parameter 32 M" N_NEURONS $end
+$var parameter 8 N" V_THRESHOLD $end
+$scope begin gen_neurons[0] $end
+$var parameter 2 O" n $end
+$var reg 8 P" acc [7:0] $end
+$scope begin gen_bram[0] $end
+$var wire 8 Q" calc_addr [7:0] $end
+$var wire 1 R" is_target_addr $end
+$var parameter 2 S" i $end
+$scope module weight_bram $end
+$var wire 8 T" addr [7:0] $end
+$var wire 1 , clk $end
+$var wire 8 U" din [7:0] $end
+$var wire 1 V" re $end
+$var wire 1 W" we $end
+$var parameter 32 X" ADDR_WIDTH $end
+$var parameter 32 Y" DATA_WIDTH $end
+$var reg 8 Z" dout [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin gen_bram[1] $end
+$var wire 8 [" calc_addr [7:0] $end
+$var wire 1 \" is_target_addr $end
+$var parameter 2 ]" i $end
+$scope module weight_bram $end
+$var wire 8 ^" addr [7:0] $end
+$var wire 1 , clk $end
+$var wire 8 _" din [7:0] $end
+$var wire 1 `" re $end
+$var wire 1 a" we $end
+$var parameter 32 b" ADDR_WIDTH $end
+$var parameter 32 c" DATA_WIDTH $end
+$var reg 8 d" dout [7:0] $end
+$upscope $end
+$upscope $end
+$scope module neuron_inst $end
+$var wire 1 H" ce $end
+$var wire 1 , clk $end
+$var wire 8 e" i_syn [7:0] $end
+$var wire 1 5 reset $end
+$var wire 16 f" v_decayed_full [15:0] $end
+$var wire 8 g" v_decayed [7:0] $end
+$var parameter 8 h" ALPHA $end
+$var parameter 32 i" DATA_WIDTH $end
+$var parameter 8 j" V_THRESHOLD $end
+$var reg 1 ?" s_out $end
+$var reg 8 k" v_mem [7:0] $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 l" k [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10000 j"
+b1000 i"
+b1000 h"
+b1000 c"
+b1000 b"
+b1 ]"
+b1000 Y"
+b1000 X"
+b0 S"
+b0 O"
+b10000 N"
+b1 M"
+b10 L"
+b1000 K"
+b1000 J"
+b10000 E"
+b1 D"
+b10 C"
+b1000 B"
+b1000 A"
+b10000 8"
+b1000 7"
+b1000 6"
+b1000 1"
+b1000 0"
+b1 +"
+b1000 '"
+b1000 &"
+b0 !"
+b1 {
+b10000 w
+b1000 v
+b1000 u
+b1000 p
+b1000 o
+b1 j
+b1000 f
+b1000 e
+b0 `
+b0 \
+b10000 [
+b10 Z
+b10 Y
+b1000 X
+b1000 W
+b10000 Q
+b10 P
+b10 O
+b1000 N
+b1000 M
+b10000 F
+b1 E
+b10 D
+b10 C
+b1000 B
+b1000 A
+b10000 *
+b1 )
+b10 (
+b10 '
+b1000 &
+b1000 %
+$end
+#0
+$dumpvars
+b10 l"
+b0 k"
+b0 g"
+b0 f"
+b0 e"
+bx d"
+0a"
+1`"
+b0 _"
+b1 ^"
+0\"
+b1 ["
+bx Z"
+0W"
+1V"
+b0 U"
+b0 T"
+1R"
+b0 Q"
+b0 P"
+b0 I"
+0H"
+b0 G"
+b0 F"
+0@"
+0?"
+b0 >"
+b0 ="
+b0 <"
+b10 ;"
+b0 :"
+09"
+b0 5"
+b0 4"
+b0 3"
+bx 2"
+0/"
+1."
+b0 -"
+b11 ,"
+0*"
+b11 )"
+bx ("
+0%"
+1$"
+b0 #"
+b10 ""
+0~
+b10 }
+b0 |
+b10 z
+b0 y
+0x
+b0 t
+b0 s
+b0 r
+bx q
+0n
+1m
+b0 l
+b1 k
+0i
+b1 h
+bx g
+0d
+1c
+b0 b
+b0 a
+1_
+b0 ^
+b0 ]
+b0 V
+b0 U
+0T
+b0 S
+b0 R
+0L
+b0 K
+b0 J
+b0 I
+b0 H
+b0 G
+0@
+0?
+b0 >
+0=
+b0 <
+b0 ;
+b0 :
+19
+b0 8
+b0 7
+b0 6
+15
+14
+03
+b0 2
+b0 1
+00
+b0 /
+b0 .
+0-
+0,
+1+
+0$
+0#
+0"
+1!
+$end
+#5000
+1,
+#10000
+0,
+#15000
+1,
+#20000
+0,
+05
+#25000
+1,
+#30000
+0,
+#35000
+1,
+#40000
+0,
+#45000
+1d
+b1000 /
+b1000 8
+b1000 H
+b1000 S
+b1000 b
+b1000 l
+b1000 #"
+b1000 -"
+10
+1,
+#50000
+0,
+#55000
+0d
+1n
+0_
+1i
+b1 .
+b1 7
+b1 G
+b1 R
+1,
+#60000
+0,
+#65000
+b10 ;"
+b10 z
+b1000 g
+0n
+00
+1,
+#70000
+0,
+#75000
+b10 ;"
+b10 z
+b1000 q
+1,
+#80000
+0,
+#85000
+b1000 r
+b1000 ]
+b10 z
+bx 3"
+bx |
+b10 ;"
+1T
+b10 6
+b10 <
+b10 I
+b10 U
+1-
+1,
+#90000
+0,
+#95000
+b100 t
+bx 5"
+1H"
+b1000000 s
+b1000 y
+bx 4"
+bx :"
+1?
+b10 z
+b1000 r
+b1000 ]
+b10 ;"
+bx 3"
+bx |
+b1 6
+b1 <
+b1 I
+b1 U
+1,
+#100000
+0,
+#105000
+b110 t
+1#
+b1100000 s
+b1100 y
+b10 z
+b10000 r
+b10000 ]
+b10 ;"
+bx 3"
+bx |
+b11 6
+b11 <
+b11 I
+b11 U
+1,
+#110000
+0,
+#115000
+b0 t
+1$
+bx e"
+bx P"
+b10 l"
+b0 s
+b0 y
+1@
+1L
+b1 >
+b1 J
+b1 >"
+b1 I"
+b1 K
+b1 V
+1x
+b10 z
+b0 r
+b0 ]
+b10 ;"
+b0 3"
+b0 |
+b0 6
+b0 <
+b0 I
+b0 U
+1,
+#120000
+0,
+#125000
+bx g"
+0$
+b10 l"
+b0 e"
+b0 P"
+bx f"
+bx k"
+0@
+0L
+b0 >
+b0 J
+b0 >"
+b0 I"
+b0 K
+b0 V
+0x
+1,
+#130000
+0,
+#135000
+1,
+#140000
+0,
+#145000
+1,
+#150000
+0,
+#155000
+1,
+#160000
+0,
+#165000
+1,
+#170000
+0,
+#175000
+1,
+#180000
+0,
+#185000
+1,
+#190000
+0,
+#195000
+1,
+#200000
+0,
+#205000
+1,
+#210000
+0,
+#215000
+0H"
+0?
+0T
+1,
+0-
+#220000
+0,
+#225000
+0#
+1,
+#230000
+0,
+#235000
+1,
+#240000
+0,
+#245000
+1,
+#250000
+0,
+#255000
+1,
+#260000
+0,
+#265000
+1,
+#270000
+0,
+#275000
+1,
+#280000
+0,
+#285000
+1,
+#290000
+0,
+#295000
+1,
+#300000
+0,
+#305000
+1,
+#310000
+0,
+#315000
+1,
+#320000
+0,
+#325000
+1,
+#330000
+0,
+#335000
+1,
+#340000
+0,
+#345000
+1,
+#350000
+0,
+#355000
+1,
+#360000
+0,
+#365000
+1,
+#370000
+0,
+#375000
+1,
+#380000
+0,
+#385000
+1,
+#390000
+0,
+#395000
+1,
+#400000
+0,
+#405000
+1,
+#410000
+0,
+#415000
+1,
